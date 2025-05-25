@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'CYCMTI'
-copyright = '2025, ProsperousBeyond'
-author = 'ProsperousBeyond'
+project = 'RA2DIY'
+copyright = '2025, RA2DIY'
+author = '九千天华'
 
 
 
@@ -53,7 +53,7 @@ gettext_compact = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
