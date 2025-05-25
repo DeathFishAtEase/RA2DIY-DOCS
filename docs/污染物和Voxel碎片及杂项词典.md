@@ -1,4 +1,8 @@
-;因为语句过少，所以这些内容全部合在一个文件，顺便把一些内容并不太多的小教程也一并合入
+# 8.污染物和Voxel碎片及杂项词典
+```{note}
+因为语句过少，所以这些内容全部合在一个文件，顺便把一些内容并不太多的小教程也一并合入
+```
+```ini
 [SmudgeTypes]
 Crater=<boolean>
 ;是否为弹坑
@@ -8,10 +12,12 @@ Width=<int>
 ;该污染物在↙↗方向上的占格
 Height=<int>
 ;该污染物在↖↘方向上的占格
-;污染物不是动画，无法使用动画相关语句，不是覆盖物，也无法使用CellAnim，这是很显而易见的
+```
+```{note}
+污染物不是动画，无法使用动画相关语句，不是覆盖物，也无法使用CellAnim，这是显而易见的
+```
 
-
-
+```ini
 [ObjectTypes]
 ;泛指所有游戏内实体，包括但不限于四大类Techno与Overlay、Terrain.etc
 
@@ -55,9 +61,9 @@ LineTrailColorDecrement=<int>
 Theater=<boolean>
 NewTheater=<boolean>
 Voxel=<boolean>
+```
 
-
-
+```ini
 [VoxelAnimType]
 ;有许多与Shape碎片（Animation）相通的语句，包括StartSound与StopSound
 ;在此仅列出VoxelAnimType专有部分和VoxelAnimType与Animation不同的部分
@@ -113,9 +119,9 @@ Image=<filename, excluding the .vxl extension>
 ;而ShareSource则没有那么严格
 ;哪怕写个TRUCKA用ShareTurretData去调那并不存在的Turret文件也不会崩
 ;再甚至哪怕写个狗屁不通的ShareSource=DTRUCKTUR然后叠个ShareBarrelData去调dtruckturbarl.vxl/hva
+```
 
-
-
+```ini
 [Tiberiums]
 ;矿石类型修改
 只有4类矿石，矿石实际以TIB开头的多个覆盖物表现，这个部分用于控制不同类型矿石生长和价值相关的数据
@@ -154,8 +160,8 @@ SpreadPercentage=<float>
 Color=<color scheme>
 ;当矿石类覆盖物使用CellAnim时强制其使用unit色盘并将其所属色映射为此处指定的配色方案
 ;不影响矿石的雷达图颜色，由覆盖物的.tem文件内部RadarColor数据决定，PhobosBuild28开始允许使用MinimapColor在此处定义
-
-
+```
+```ini
 对战模式【原版[巨富|海战|自由交战|.etc]】修改
 ;对于使用XNA CNCNet Client的MOD而言这部分倒是无所谓的
 
@@ -169,7 +175,8 @@ STT:ModeTechLevelSpare  -> 光标悬浮在这个模式上时底边栏的文本
 TSpare.ini              -> 这个模式加载的模式ini
 techspare               -> 这个模式的识别符，需要地图[Basic] GameMode=包含这个条目才能在这个模式使用这张地图，例如直接填写standard就可以直接启用原版作战模式的地图
 true                    -> 这个模式是否允许使用随机地图生成器
-
+```
+```ini
 音效相关的内容，此处为sound(md).ini中，新增音效需要加入注册表[SoundList]中
 [SoundList]
 +=NewSound
@@ -232,10 +239,15 @@ MinVolume=
 ;仅用于Type=global，用于定义最小音量
 Range=
 ;仅用于Type=local，用于指定可以听到音效的范围
-
+```
+```{note}
 Westwood原有音效文件的命名约定如下：
-i-步兵，a-环境，v-载具，u-用户界面，b-建筑，g-通用，s-超武，后接对象注册名的前（最多）三个字母
-mo-移动，se-选择，att-攻击，fe-恐慌，pow-仅工程师断电，di/die-寄了，sta-载具启动，cra-战机坠毁
-注意文件应使用wav格式，采样率为22050Hz，8位或16位单声道，BGM可以使用立体声
 
+i-步兵，a-环境，v-载具，u-用户界面，b-建筑，g-通用，s-超武，后接对象注册名的前（最多）三个字母
+
+mo-移动，se-选择，att-攻击，fe-恐慌，pow-仅工程师断电，di/die-寄了，sta-载具启动，cra-战机坠毁
+```
+```{important}
+注意文件应使用wav格式，采样率为22050Hz，8位或16位单声道，BGM可以使用立体声
+```
 ;by九千天华
