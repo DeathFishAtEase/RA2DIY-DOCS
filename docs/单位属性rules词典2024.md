@@ -25,7 +25,7 @@ AirportBound =
 由于WW在RA2删了没机位时战机从地图外飞来的效果，现在不在[General] -> PadAircraft=声明的战机把机位满后你却不拉出去的话图标虽然依然不会灰掉，但是点下去会卡在一半的位置并且无法取消
 如果没有武器还会有一些特殊的运动表现
 AirRangeBonus =
-单位瞄准空中目标时的额外射程，不影响攻击时仍会尝试将目标套进[WeaponType] -> Range=的范围
+单位瞄准空中目标时的额外射程，不影响攻击时仍会尝试将目标套进[Weapon] -> Range=的范围
 但追击目标时用上此句可以防止追一步停一步，搭配[TechnoType] -> OpportunityFire=yes食用效果奇佳
 AllowedToStartInMultiplayer =
 填yes或no。这个代码指定单位是否可以在游戏开始时伴随基地车出现（如苏军开始时的动员兵、犀牛坦克）。根据单位的Owner进行分配，会自动寻找距离预定位置最近且符合MovementZone的区域，例如出生点周围全是陆地那么船会生成在最近的岸边
@@ -424,7 +424,7 @@ DeathAnims =
 使用规则见[Warhead] -> InfDeath=词条底端
 通过这个语句创建的动画会使用死者的所属方，Ares允许动画上定义所属方的继承来源，详见Ares说明书
 DeathWeapon =
-死亡武器，用于[TechnoType] -> Explodes=yes的单位，特殊规则见[WeaponType] -> Suicide=yes
+死亡武器，用于[TechnoType] -> Explodes=yes的单位，特殊规则见[Weapon] -> Suicide=yes
 默认使用主武器（[TechnoType] -> Primary=/IFV 当前武器），主武器不存在使用[CombatDamage] -> DeathWeapon=的武器
 对于处于空中的单位会爆两次，在空中被摧毁时先Explosioin并爆一次DeathWeapon，砸到地面再爆一次DeathWeapon
 对于导弹类对象，其命中使用自己全局或Ares自定义导弹参数中所设定的弹头和武器，而被摧毁使用这里设定的死亡武器
@@ -1594,7 +1594,7 @@ SAM =
 目标必须为在[General] -> PadAircraft=列表中的Aircraft，否则根本不会锁定，也就是火箭飞行兵和夜鹰直升机那些实际上是Infantry与Vehicle的对象不会成为目标
 此外目标Aircraft必须Dock为空，并且只有SAM获取目标时这个Aircraft就是在空中悬停的状态那么SAM才能正常发射武器，一旦Aircraft之后移动了一下，那么SAM就会哑火
 只有一些特定的转弯情况偶尔会突然射两发，然后继续哑火，并且这种情况下SAM炮塔仍然会去重新同步到目标方向，但再次同步的间隔并不是武器的ROF，也并不是固定值
-甚至前面说的突然射两发的情况可以并不面向目标开火，哪怕并不存在[WeaponType] -> OmniFire=yes
+甚至前面说的突然射两发的情况可以并不面向目标开火，哪怕并不存在[Weapon] -> OmniFire=yes
 此外SAM还强制只能对空攻击，也就是不能对落到地面的目标开火
 也就是SAM的目标只能是拥有AirportBound=yes与Dock=none且起飞过的Aircraft
 只有一些原版引擎下需要特殊判定效果的地方会用到，现代引擎下已经没有必要死磕这个逻辑
