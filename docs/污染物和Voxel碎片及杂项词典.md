@@ -34,8 +34,8 @@ Height=<int>
 ;===============================Rules===============================|
 Image=<Image>
 AlphaImage=<filename, excluding the .shp extension>
-;原版下由TechnoType所挂的AlphaImage只有切屏才会刷新位置（Ares0.1已修复）
-;原版下由Animation所挂的AlphaImage存在无法正常移除等问题（Ares0.5已修复）
+;原版下由TechnoType所挂的AlphaImage只有切屏才会刷新位置（Ares 0.1已修复）
+;原版下由Animation所挂的AlphaImage存在无法正常移除等问题（Ares 0.5已修复）
 CrushSound=<sound>
 AmbientSound=<sound>
 Crushable=<boolean>
@@ -48,7 +48,7 @@ Bombable=<boolean>
 NoSpawnAlt=<boolean>
 AlternateArcticArt=<boolean>
 RadarInvisible=<boolean>
-;PhobosBuild28前实际上TerrainType并不能正常使用这个功能，b28后进行了支持并将默认值从true改为false
+;Phobos Build28前实际上TerrainType并不能正常使用这个功能，b28后进行了支持并将默认值从true改为false
 Selectable=<boolean>
 LegalTarget=<boolean>
 Armor=<Armor>
@@ -156,10 +156,10 @@ Image=[1|2|3|4]
 ;2 对应 OverlayType 内部表中 027 开始的 [GEM01]....[GEM12]
 ;3 对应 OverlayType 内部表中 127 开始的 [TIB2_01]..[TIB2_20]
 ;4 对应 OverlayType 内部表中 147 开始的 [TIB3_01]..[TIB3_20]
-;除 TS 中的蓝色泰伯利亚／RA2 中的水晶矿仅 12 个外另 3 类多出的 8 个覆盖物用于该类型矿石延伸到斜坡上时使用，但 RA2 中已经禁用斜坡长矿
+;除 TS 中的蓝色泰伯利亚／ RA2 中的水晶矿仅 12 个外另 3 类多出的 8 个覆盖物用于该类型矿石延伸到斜坡上时使用，但 RA2 中已经禁用斜坡长矿
 Power=<int>
 ;RA2 中无意义，TS 中泰伯利亚上高度低于 HoverHeight 的单位会持续受到 (Power/10) 的伤害
-;Ares0.5 已复原该逻辑，并且新语句允许使用负值伤害治疗单位和禁用特定类型矿石产生伤害，详见说明书，如果你获得本文档的同时没有配套这一文件，说明你的文档并非从原正式发布渠道获取，而是已经被第三方未经许可拆分修改过的
+;Ares 0.5 已复原该逻辑，并且新语句允许使用负值伤害治疗单位和禁用特定类型矿石产生伤害，详见说明书，如果你获得本文档的同时没有配套这一文件，说明你的文档并非从原正式发布渠道获取，而是已经被第三方未经许可拆分修改过的
 Value=25
 ;每 1 单位矿石的单价
 Growth=<int>
@@ -178,7 +178,7 @@ SpreadPercentage=<float>
 ;如果真的需要长得特别快可以使用 [OverlayType] -> CellAnim 挂动画用碎片刷覆盖物的逻辑来模拟，而不是直接用这个
 Color=<color scheme>
 ;当矿石类覆盖物使用 CellAnim 时强制其使用 unit 色盘并将其所属色映射为此处指定的配色方案
-;不影响矿石的雷达图颜色，由覆盖物的 .tem 文件内部 RadarColor 数据决定，PhobosBuild28 开始允许使用 MinimapColor 在此处定义
+;不影响矿石的雷达图颜色，由覆盖物的 .tem 文件内部 RadarColor 数据决定，Phobos Build28 开始允许使用 MinimapColor 在此处定义
 ```
 
 ## 对战模式
